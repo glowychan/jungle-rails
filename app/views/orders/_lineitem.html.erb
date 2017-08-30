@@ -1,0 +1,7 @@
+<% @order.line_items.each do |line_item| %>
+  <li><%= line_item.product.name %></li>
+  <img src="<%= line_item.product.image.thumb %>">
+  <li><%= line_item.product.description %></li>
+  <li>Qty: <%= line_item.quantity %></li>
+  <li>Total: $<%= line_item.total_price_cents/100 %></li>
+ <% end %>
