@@ -42,7 +42,7 @@
     <%= form_for([@product, @product.reviews.build]) do |f| %>
       <p>
         <%= f.label :rating %><br>
-        <%= f.text_field :rating %>
+        <%= f.select :rating, [[1],[2],[3],[4],[5]] %>
       </p>
       <p>
         <%= f.label :description %><br>
