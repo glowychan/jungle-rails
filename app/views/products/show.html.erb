@@ -28,4 +28,10 @@
 
   </article>
 
+  <% @product.reviews.each do |review| %>
+    <li><%= review.description %></li>
+    <li><%= review.rating %></li>
+    <li><%= review.user.first_name %></li>
+  <% end %>
+
 </section>
