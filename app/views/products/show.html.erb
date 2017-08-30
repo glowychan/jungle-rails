@@ -30,6 +30,14 @@
             <dd><%= review.description %></dd>
             <dd><%= review.rating %></dd>
             <dd><%= review.user.first_name %></dd>
+            <% if current_user.id == review.user.id %>
+              <dd>
+                <%= link_to 'Delete', [review.product, review],
+                             method: :delete,
+                             data: { confirm: 'Are you sure?' } %>
+
+              </dd>
+           <% end %>
           <% end %>
         </dl>
       </div>
