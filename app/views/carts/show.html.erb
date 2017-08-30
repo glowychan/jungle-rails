@@ -5,7 +5,7 @@
   </header>
 
   <% if cart.length == 0 %>
-   <div>cart is empty</div>
+   <div>Cart is empty! Return to <%= link_to 'Products', products_path %></div>
   <% else %>
     <div class="panel panel-default items">
       <table class="table table-bordered">
