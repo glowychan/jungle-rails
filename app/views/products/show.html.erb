@@ -37,20 +37,22 @@
 
   </article>
 
-  <article class="product-review">
-    <h2>Add a comment:</h2>
-    <%= form_for([@product, @product.reviews.build]) do |f| %>
-      <p>
-        <%= f.label :rating %><br>
-        <%= f.select :rating, [[1],[2],[3],[4],[5]] %>
-      </p>
-      <p>
-        <%= f.label :description %><br>
-        <%= f.text_area :description %>
-      </p>
-      <p>
-        <%= f.submit %>
-      </p>
+  <% if current_user %>
+    <article class="product-review">
+      <h2>Add a comment:</h2>
+      <%= form_for([@product, @product.reviews.build]) do |f| %>
+        <p>
+          <%= f.label :rating %><br>
+          <%= f.select :rating, [[1],[2],[3],[4],[5]] %>
+        </p>
+        <p>
+          <%= f.label :description %><br>
+          <%= f.text_area :description %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
     <% end %>
   </article>
 

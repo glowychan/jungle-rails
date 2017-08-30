@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_filter :authorize, except: [:index, :show]
+
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.create(review_params)
