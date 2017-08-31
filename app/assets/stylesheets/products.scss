@@ -38,6 +38,10 @@ main section.categories-show {
         width: 100%;
         opacity: 0.3;
         transition: all 0.3s;
+
+        a[disabled] {
+            pointer-events: none;
+        }
       }
 
       aside.price {
