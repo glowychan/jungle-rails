@@ -22,8 +22,18 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+          <dt>Average Rating</dt>
+          <dd>
+            <% if @product.reviews %>
+              <%= @product.average_rating.to_i %>
+            <% else %>
+              <i>No reviews yet</i>
+            <% end %>
+          </dd>
         </dl>
+
         <!-- Product reviews are rendered here -->
+
         <dl class="dl-horizontal">
           <dt>Reviews</dt>
           <% @product.reviews.reverse.each do |review| %>
