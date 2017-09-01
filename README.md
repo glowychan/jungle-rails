@@ -4,7 +4,7 @@ A mini e-commerce application built with Rails 4.2.
 
 # Final Product
 
-!["Screenshot of main urls page"]()
+!["Screenshot of main urls page"](https://github.com/glowychan/jungle-rails/blob/master/01.png)
 
 ## Setup
 
